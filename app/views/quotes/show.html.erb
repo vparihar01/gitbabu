@@ -1,0 +1,21 @@
+<p>
+  <p>
+  <b>THANK YOU <font size="5" face="verdana" color="green">"<%=h @quote.name %>"</font> FOR SUBMITTING YOUR QUOTE</b>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @quote.email %>
+</p>
+  <b>Title:</b>
+  <%=h @quote.title %>
+</p>
+
+<p>
+  <b>Quote:</b>
+  <%=h @quote.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

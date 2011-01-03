@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Quotes: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'default.css' %>
+</head>
+<body>
+ <div id="wrapper">
+		<div id="header">
+			<div>
+
+				<h1>GITBABU</h1>
+				<ul id="nav">
+                    
+                    <li><%= link_to 'New quote', new_quote_path %></li>
+					<li><a href="/quotes/">Change the Quote</a></li>
+                    <% if logged_in? %>
+                    <li><%= link_to "Edit Account", edit_user_path('account') %></li>
+                    <li><%= link_to "Logout", logout_path %></li>
+                
+                <% end %>
+				</ul>
+			</div>
+		</div>
+
+		<div id="content">
+		  <%= yield %>
+		</div>
+		<div id="clearfooter"></div>
+    </div>
+	<div id="footer"></div>
+<p style="color: green"><%= notice %></p>
+
+
+</body>
+</html>
